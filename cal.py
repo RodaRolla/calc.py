@@ -3,7 +3,7 @@
 
 def printTop(st):
 	try:
-		print "[%d] %d" % (len(st), st[-1])
+		print "(%d) %s =  %d" % (len(st), st, st[-1])
 	except Exception:
 		print "Ой-ой! Стек пустой!"
 
@@ -53,8 +53,7 @@ ops={
 stack=[]
 try:
 	while True:
-		print "Пиши код: "
-		for token in raw_input().split(' '):
+		for token in raw_input("Пиши код: ").split(' '):
 			#print "Токен='%s'" % token
 			try:
 				if token == 'exit':
@@ -79,4 +78,3 @@ try:
 except (KeyboardInterrupt,EOFError):
 	print "всего хорошего!"
 	exit(0)
-
