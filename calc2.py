@@ -4,6 +4,8 @@ def printTop(stack):
 	try:
 		print (len(stack), stack[-1])
 	except: Exception
+		pass
+		
 def multiplying(stack):
 	stack.append(stack.pop()*stack.pop())
 
@@ -34,10 +36,10 @@ while True:
 			if token.isdigit():
 				stack.append(int(token))
 				printTop(stack)
+				contunue
 			if token == 'stack':
 				print (stack)
-			continue
-			
+				continue
 			if token in ops:
 				ops[token](stack)
 				printTop(stack)
